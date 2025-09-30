@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Hunian Nyaman di Jombang – Beli Langsung dari Developer | PT Bangun
+      Sejahtera
+    </title>
+    <meta
+      name="description"
+      content="Miliki rumah di Jombang langsung dari developer PT Bangun Sejahtera. Hunian modern, fasilitas lengkap, proses aman tanpa perantara. Hubungi WhatsApp sekarang."
+    />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ResidentialProject",
+        "name": "Griya Asri Jombang",
+        "description": "Perumahan baru di Jombang — dibangun & dijual langsung oleh PT Bangun Sejahtera.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Jombang",
+          "addressRegion": "Jawa Timur",
+          "addressCountry": "ID"
+        },
+        "seller": {
+          "@type": "Organization",
+          "name": "PT Bangun Sejahtera"
+        }
+      }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        --primary: #0d6efd;
+        --primary-dark: #0b5ed7;
+        --accent: #ffc107;
+        --neutral: #f8f9fa;
+        --text: #1f2937;
+        --text-light: #6b7280;
+        --white: #ffffff;
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --radius: 0.5rem;
+        --radius-lg: 1rem;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--text);
+        line-height: 1.6;
+        background-color: var(--white);
+        scroll-behavior: smooth;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      section {
+        padding: 4rem 0;
+      }
+
+      .bg-light {
+        background-color: var(--neutral);
+      }
+
+      /* Navbar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+        z-index: 1000;
+        padding: 1rem 0;
+      }
+
+      .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .logo-icon {
+        font-size: 1.5rem;
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--primary);
+      }
+
+      .nav-contact {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: var(--primary);
+        color: var(--white);
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .nav-contact:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--radius);
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      .btn-secondary:hover {
+        background-color: rgba(13, 110, 253, 0.1);
+      }
+
+      .btn-accent {
+        background-color: var(--accent);
+        color: var(--text);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-accent:hover {
+        background-color: #e6ac00;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .btn-whatsapp {
+        background-color: #25d366;
+        color: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .btn-whatsapp:hover {
+        background-color: #128c7e;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")
+            no-repeat center center;
+        background-size: cover;
+        color: var(--white);
+        text-align: center;
+        margin-top: 0;
+        padding-top: 80px;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 2.5rem;
+        opacity: 0.9;
+      }
+
+      .hero-badge {
+        display: inline-block;
+        background-color: var(--accent);
+        color: var(--text);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        font-size: 0.875rem;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Section Headers */
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-header p {
+        max-width: 700px;
+        margin: 0 auto;
+        color: var(--text-light);
+      }
+
+      /* About Section */
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .about-image {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .highlights {
+        margin-top: 2rem;
+      }
+
+      .highlight-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+      }
+
+      .highlight-icon {
+        color: var(--primary);
+        margin-right: 0.75rem;
+        flex-shrink: 0;
+      }
+
+      /* Location Section */
+      .location-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .map-container {
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        height: 400px;
+        background-color: #e9ecef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nearby-places {
+        margin-top: 2rem;
+      }
+
+      .place-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      /* Facilities Section */
+      .facilities-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .facility-card {
+        background-color: var(--white);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        box-shadow: var(--shadow);
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .facility-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .facility-icon {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      /* Units Section */
+      .units-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .unit-card {
+        background-color: var(--white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: transform 0.3s ease;
+      }
+
+      .unit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .unit-image {
+        height: 200px;
+        background-color: #e9ecef;
+        overflow: hidden;
+      }
+
+      .unit-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .unit-content {
+        padding: 1.5rem;
+      }
+
+      .unit-price {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin: 1rem 0;
+      }
+
+      .unit-features {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.875rem;
+      }
+
+      .payment-options {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .payment-tag {
+        background-color: var(--neutral);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.375rem;
+        font-size: 0.875rem;
+      }
+
+      /* Gallery Section */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      .gallery-item {
+        border-radius: var(--radius);
+        overflow: hidden;
+        height: 200px;
+        background-color: #e9ecef;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Testimonials Section */
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .testimonial-card {
+        background-color: var(--white);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        box-shadow: var(--shadow);
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial-author {
+        font-weight: 500;
+      }
+
+      /* Process Section */
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .process-step {
+        text-align: center;
+        padding: 1.5rem;
+      }
+
+      .step-number {
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        margin: 0 auto 1rem;
+      }
+
+      /* FAQ Section */
+      .faq-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        margin-bottom: 1rem;
+        border: 1px solid #e5e7eb;
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+
+      .faq-question {
+        padding: 1rem 1.5rem;
+        background-color: var(--neutral);
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .faq-answer {
+        padding: 1rem 1.5rem;
+        display: none;
+      }
+
+      .faq-item.active .faq-answer {
+        display: block;
+      }
+
+      /* Contact Section */
+      .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+
+      .contact-info {
+        margin-bottom: 2rem;
+      }
+
+      .contact-form {
+        background-color: var(--white);
+        border-radius: var(--radius);
+        padding: 2rem;
+        box-shadow: var(--shadow);
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.375rem;
+        font-family: inherit;
+        font-size: 1rem;
+      }
+
+      textarea.form-control {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      .form-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      /* WhatsApp CTA */
+      .whatsapp-cta {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: #25d366;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow-lg);
+        z-index: 100;
+        font-size: 1.75rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .whatsapp-cta:hover {
+        transform: scale(1.1);
+        background-color: #128c7e;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--text);
+        color: var(--white);
+        padding: 3rem 0;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+      }
+
+      .footer-section h3 {
+        color: var(--white);
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: #d1d5db;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--white);
+      }
+
+      .copyright {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #374151;
+        color: #9ca3af;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.75rem;
+        }
+
+        .hero h1 {
+          font-size: 2.25rem;
+        }
+
+        .about-content,
+        .location-content,
+        .contact-container {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-buttons,
+        .form-buttons {
+          flex-direction: column;
+        }
+
+        .btn {
+          width: 100%;
+          text-align: center;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .nav-menu {
+          position: fixed;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background-color: var(--white);
+          flex-direction: column;
+          padding: 1.5rem;
+          box-shadow: var(--shadow);
+          transform: translateY(-100%);
+          opacity: 0;
+          transition: all 0.3s ease;
+          z-index: 999;
+        }
+
+        .nav-menu.active {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        .nav-contact {
+          margin-top: 1rem;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container navbar-container">
+        <a href="#" class="logo">
+          <i class="fas fa-home logo-icon"></i>
+          <span>Griya Asri Jombang</span>
+        </a>
+
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">Tentang</a></li>
+          <li><a href="#location" class="nav-link">Lokasi</a></li>
+          <li><a href="#facilities" class="nav-link">Fasilitas</a></li>
+          <li><a href="#units" class="nav-link">Unit</a></li>
+          <li><a href="#gallery" class="nav-link">Galeri</a></li>
+          <li><a href="#contact" class="nav-link">Kontak</a></li>
+          <li>
+            <a
+              href="https://wa.me/+6289606360400?text=Halo%20Griya%20Asri%20Jombang%2C%20saya%20ingin%20konsultasi%20tentang%20perumahan%20Anda"
+              class="nav-contact"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp"></i>
+              <span>+6289606360400</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">Beli Langsung dari Developer</div>
+          <h1>Rumah Impian Keluarga di Jombang, Tanpa Perantara</h1>
+          <p>
+            Hemat hingga 5% tanpa biaya agen. Hunian modern dengan fasilitas
+            lengkap, lingkungan asri, dan jaminan kualitas langsung dari PT
+            Bangun Sejahtera.
+          </p>
+          <div class="hero-buttons">
+            <a href="#units" class="btn btn-primary">Lihat Unit Tersedia</a>
+            <a
+              href="https://wa.me/+6289606360400?text=Halo%20Griya%20Asri%20Jombang%2C%20saya%20ingin%20konsultasi%20tentang%20perumahan%20Anda"
+              class="btn btn-whatsapp"
+              target="_blank"
+            >
+              <i class="fab fa-whatsapp"></i> Konsultasi via WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Project Section -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tentang Griya Asri Jombang</h2>
+          <p>
+            Proyek perumahan eksklusif yang dibangun langsung oleh developer
+            terpercaya di Jombang
+          </p>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Griya Asri Jombang"
+            />
+          </div>
+          <div class="about-text">
+            <p>
+              Griya Asri Jombang adalah proyek perumahan oleh PT Bangun
+              Sejahtera, dibangun untuk keluarga yang mengutamakan kenyamanan
+              dan keamanan di kawasan Jombang yang strategis.
+            </p>
+            <p>
+              Luas kawasan: 3.5 ha. Jumlah unit: 120 unit. Konsep: modern
+              minimalis dengan ruang hijau luas dan lingkungan yang asri.
+            </p>
+            <div class="highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  Dibangun & dijual langsung oleh developer tanpa perantara
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  Legalitas lengkap (IMB, SHGB/SHM sesuai progress pembangunan)
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  Kerjasama dengan bank mitra untuk proses KPR yang mudah
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="bg-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>Lokasi Strategis di Jombang</h2>
+          <p>
+            Terletak di kawasan yang mudah dijangkau dengan akses ke berbagai
+            fasilitas penting
+          </p>
+        </div>
+        <div class="location-content">
+          <div class="location-text">
+            <p>
+              Griya Asri Jombang berada di lokasi strategis Jombang, dengan
+              akses mudah ke pusat kota, sekolah, rumah sakit, dan pusat
+              perbelanjaan. Hanya 10 menit ke pusat kota Jombang.
+            </p>
+            <div class="nearby-places">
+              <div class="place-item">
+                <span>Sekolah Favorit (SDN Jombang 3)</span>
+                <span>1.5 km</span>
+              </div>
+              <div class="place-item">
+                <span>Rumah Sakit Umum Jombang</span>
+                <span>2.5 km</span>
+              </div>
+              <div class="place-item">
+                <span>Pusat Perbelanjaan Jombang</span>
+                <span>3 km</span>
+              </div>
+              <div class="place-item">
+                <span>Stasiun Jombang</span>
+                <span>4 km</span>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/+6289606360400?text=Halo%20Griya%20Asri%20Jombang%2C%20saya%20ingin%20tanya%20rute%20menuju%20lokasi%20perumahan"
+              class="btn btn-primary"
+              style="margin-top: 1.5rem"
+              target="_blank"
+              >Minta Petunjuk Lokasi</a
+            >
+          </div>
+          <div class="map-container">
+            <!-- Placeholder for map -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.029366416594!2d112.23327717501226!3d-7.663372392336761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e785c13b33f445b%3A0x9bbfd63d5da1f8c8!2sJombang%2C%20Kec.%20Jombang%2C%20Kabupaten%20Jombang%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1688976543210!5m2!1sid!2sid"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities">
+      <div class="container">
+        <div class="section-header">
+          <h2>Fasilitas untuk Keluarga</h2>
+          <p>
+            Didesain khusus untuk memenuhi kebutuhan kenyamanan seluruh anggota
+            keluarga
+          </p>
+        </div>
+        <div class="facilities-grid">
+          <div class="facility-card">
+            <div class="facility-icon">🌳</div>
+            <h3>Taman & Area Hijau</h3>
+            <p>
+              Lingkungan asri dengan taman yang terawat untuk kenyamanan
+              keluarga
+            </p>
+          </div>
+          <div class="facility-card">
+            <div class="facility-icon">🎠</div>
+            <h3>Playground Anak</h3>
+            <p>Area bermain yang aman dan menyenangkan untuk anak-anak</p>
+          </div>
+          <div class="facility-card">
+            <div class="facility-icon">🔒</div>
+            <h3>Keamanan 24/7</h3>
+            <p>One gate system & CCTV untuk keamanan penghuni</p>
+          </div>
+          <div class="facility-card">
+            <div class="facility-icon">🏃</div>
+            <h3>Jogging Track</h3>
+            <p>
+              Jalur khusus untuk lari dan jalan sehat di lingkungan perumahan
+            </p>
+          </div>
+          <div class="facility-card">
+            <div class="facility-icon">🚗</div>
+            <h3>Parkir Luas</h3>
+            <p>
+              Area parkir yang luas dan terorganisir untuk kendaraan penghuni
+            </p>
+          </div>
+          <div class="facility-card">
+            <div class="facility-icon">💧</div>
+            <h3>Air Bersih</h3>
+            <p>Ketersediaan air bersih dengan sistem pengolahan yang modern</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Units Section -->
+    <section id="units" class="bg-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tipe Unit & Harga</h2>
+          <p>
+            Pilih rumah yang sesuai dengan kebutuhan dan budget keluarga Anda
+          </p>
+        </div>
+        <div class="units-grid">
+          <div class="unit-card">
+            <div class="unit-image">
+              <img
+                src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Tipe A - 1 Lantai"
+              />
+            </div>
+            <div class="unit-content">
+              <h3>Tipe A - 1 Lantai</h3>
+              <p>60 m² (LT 120 m²)</p>
+              <div class="unit-features">
+                <div class="feature">🛏️ 2 Kamar</div>
+                <div class="feature">🚿 1 Kamar Mandi</div>
+              </div>
+              <div class="unit-price">Rp 650.000.000</div>
+              <div class="payment-options">
+                <span class="payment-tag">Cash Keras</span>
+                <span class="payment-tag">Cicilan Developer</span>
+                <span class="payment-tag">KPR Bank</span>
+              </div>
+              <a
+                href="https://wa.me/+6289606360400?text=Halo%20Griya%20Asri%20Jombang%2C%20saya%20tertarik%20dengan%20Tipe%20A%20-%201%20Lantai.%20Bisa%20minta%20info%20lebih%20lanjut%3F"
+                class="btn btn-primary"
+                style="margin-top: 1rem; width: 100%"
+                target="_blank"
+                >Konsultasi Unit Ini</a
+              >
+            </div>
+          </div>
+          <div class="unit-card">
+            <div class="unit-image">
+              <img
+                src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2065&q=80"
+                alt="Tipe B - 2 Lantai"
+              />
+            </div>
+            <div class="unit-content">
+              <h3>Tipe B - 2 Lantai</h3>
+              <p>100 m² (LT 120 m²)</p>
+              <div class="unit-features">
+                <div class="feature">🛏️ 3 Kamar</div>
+                <div class="feature">🚿 2 Kamar Mandi</div>
+              </div>
+              <div class="unit-price">Rp 950.000.000</div>
+              <div class="payment-options">
+                <span class="payment-tag">Cash Keras</span>
+                <span class="payment-tag">Cicilan Developer</span>
+                <span class="payment-tag">KPR Bank</span>
+              </div>
+              <a
+                href="https://wa.me/+6289606360400?text=Halo%20Griya%20Asri%20Jombang%2C%20saya%20tertarik%20dengan%20Tipe%20B%20-%202%20Lantai.%20Bisa%20minta%20info%20lebih%20lanjut%3F"
+                class="btn btn-primary"
+                style="margin-top: 1rem; width: 100%"
+                target="_blank"
+                >Konsultasi Unit Ini</a
+              >
+            </div>
+          </div>
+          <div class="unit-card">
+            <div class="unit-image">
+              <img
+                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Tipe C - 2 Lantai Mewah"
+              />
+            </div>
+            <div class="unit-content">
+              <h3>Tipe C - 2 Lantai Mewah</h3>
+              <p>120 m² (LT 150 m²)</p>
+              <div class="unit-features">
+                <div class="feature">🛏️ 4 Kamar</div>
+                <div class="feature">🚿 3 Kamar Mandi</div>
+              </div>
+              <div class="unit-price">Rp 1.250.000.000</div>
+              <div class="payment-options">
+                <span class="payment-tag">Cash Keras</span>
+                <span class="payment-tag">Cicilan Developer</span>
+                <span class="payment-tag">KPR Bank</span>
+              </div>
+              <a
+                href="https://wa.me/+6289606360400?text=Halo%20Griya%20Asri%20Jombang%2C%20saya%20tertarik%20dengan%20Tipe%20C%20-%202%20Lantai%20Mewah.%20Bisa%20minta%20info%20lebih%20lanjut%3F"
+                class="btn btn-primary"
+                style="margin-top: 1rem; width: 100%"
+                target="_blank"
+                >Konsultasi Unit Ini</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--text-light);
+            font-size: 0.875rem;
+          "
+        >
+          <p>
+            Harga bisa berubah. Untuk price list lengkap dan promo, hubungi
+            marketing via WhatsApp.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <h2>Galeri & Denah</h2>
+          <p>Lihat lebih dekat fasilitas dan desain hunian kami</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80"
+              alt="Interior Rumah"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Dapur Modern"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Kamar Tidur"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-9635eaca8a38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              alt="Taman Perumahan"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>Kata Pembeli</h2>
+          <p>Pengalaman langsung dari penghuni Griya Asri Jombang</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "Pembelian langsung dari developer membuat proses lebih cepat dan
+              aman. Tidak ada biaya tambahan untuk perantara. Developer juga
+              responsif menangani pertanyaan kami."
+            </div>
+            <div class="testimonial-author">Bapak Andi, Dokter</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "Lingkungan nyaman untuk anak-anak, fasilitas lengkap. Developer
+              memberikan garansi purna jual yang membuat kami tenang tinggal di
+              sini."
+            </div>
+            <div class="testimonial-author">Ibu Sari, Guru</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "Proses KPR dibantu sampai selesai oleh tim marketing. Lokasi
+              strategis, dekat dengan sekolah dan pusat perbelanjaan. Sangat
+              recommended untuk keluarga."
+            </div>
+            <div class="testimonial-author">Bapak Rudi, Wiraswasta</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process">
+      <div class="container">
+        <div class="section-header">
+          <h2>Cara Beli Langsung dari Developer</h2>
+          <p>Proses transparan dan mudah tanpa perantara</p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Konsultasi & Pilih Unit</h3>
+            <p>
+              Konsultasi via WhatsApp atau kunjungi lokasi, lalu pilih tipe unit
+              yang sesuai
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>Booking & DP</h3>
+            <p>
+              Booking unit dengan DP, konsultasi KPR dengan bank mitra jika
+              diperlukan
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Proses Legal</h3>
+            <p>
+              Pengurusan dokumen dan akad langsung dengan developer, tanpa biaya
+              tambahan
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <h3>Serah Terima</h3>
+            <p>
+              Serah terima kunci & garansi purna jual langsung dari developer
+            </p>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem">
+          <a
+            href="https://wa.me/+6289606360400?text=Halo%20Griya%20Asri%20Jombang%2C%20saya%20ingin%20tanya%20lebih%20detail%20tentang%20proses%20pembelian%20rumah%20langsung%20dari%20developer"
+            class="btn btn-primary"
+            target="_blank"
+            >Konsultasi Proses Pembelian</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>Pertanyaan Umum</h2>
+          <p>
+            Informasi penting seputar pembelian rumah langsung dari developer
+          </p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Apakah bisa menggunakan KPR?</span>
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Ya, kami memiliki bank mitra untuk memproses KPR. Tim marketing
+                kami akan membantu proses pengajuan KPR hingga disetujui.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Apakah ada biaya agen atau perantara?</span>
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Tidak, transaksi langsung dengan developer tanpa biaya agen.
+                Anda berhemat hingga 5% dari harga rumah karena tidak ada komisi
+                perantara.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Bagaimana dengan garansi bangunan?</span>
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Kami memberikan garansi struktur 10 tahun, garansi finishing 2
+                tahun. Tim developer akan menangani keluhan selama masa garansi.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Apakah bisa dicicil tanpa KPR?</span>
+              <span>+</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Ya, kami menyediakan program cicilan langsung ke developer
+                dengan tenor hingga 36 bulan tanpa bunga (syarat dan ketentuan
+                berlaku).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Hubungi Marketing Developer</h2>
+          <p>
+            Konsultasi gratis via WhatsApp, jadwalkan kunjungan lokasi, atau
+            minta brosur lengkap
+          </p>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>PT Bangun Sejahtera</h3>
+            <p>
+              Developer terpercaya dengan pengalaman lebih dari 15 tahun
+              membangun hunian berkualitas di Jombang dan sekitarnya.
+            </p>
+            <div class="contact-details" style="margin-top: 2rem">
+              <p>
+                <strong>Alamat:</strong> Jl. Perumahan Griya Asri No. 88,
+                Jombang, Jawa Timur
+              </p>
+              <p><strong>Telepon/WhatsApp:</strong> +6289606360400</p>
+              <p><strong>Email:</strong> info@griyaasrijombang.com</p>
+              <p>
+                <strong>Jam Operasional:</strong> Senin - Minggu, 08:00 - 17:00
+                WIB
+              </p>
+            </div>
+            <div style="margin-top: 2rem">
+              <a
+                href="https://wa.me/+6289606360400?text=Halo%20Griya%20Asri%20Jombang%2C%20saya%20ingin%20konsultasi%20tentang%20perumahan%20Anda"
+                class="btn btn-whatsapp"
+                target="_blank"
+                style="margin-right: 1rem"
+              >
+                <i class="fab fa-whatsapp"></i> WhatsApp Sekarang
+              </a>
+              <a href="tel:081234567890" class="btn btn-secondary">
+                <i class="fas fa-phone"></i> Telepon Sekarang
+              </a>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Kirim Pesan</h3>
+            <p>Isi form berikut dan kami akan menghubungi Anda via WhatsApp</p>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="nama" class="form-label">Nama Lengkap</label>
+                <input type="text" id="nama" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="telepon" class="form-label">Nomor WhatsApp</label>
+                <input type="tel" id="telepon" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label for="pilihan_unit" class="form-label"
+                  >Pilihan Unit</label
+                >
+                <select id="pilihan_unit" class="form-control">
+                  <option value="">Pilih tipe unit</option>
+                  <option value="Tipe A">Tipe A - 1 Lantai</option>
+                  <option value="Tipe B">Tipe B - 2 Lantai</option>
+                  <option value="Tipe C">Tipe C - 2 Lantai Mewah</option>
+                  <option value="Lainnya">Belum Tahu / Konsultasi</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="pesan" class="form-label"
+                  >Pertanyaan atau Pesan</label
+                >
+                <textarea
+                  id="pesan"
+                  class="form-control"
+                  placeholder="Tanyakan informasi yang Anda butuhkan..."
+                ></textarea>
+              </div>
+              <div class="form-buttons">
+                <button type="submit" class="btn btn-primary">
+                  Kirim Pesan via WhatsApp
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp CTA -->
+    <a
+      href="https://wa.me/+6289606360400?text=Halo%20Griya%20Asri%20Jombang%2C%20saya%20ingin%20konsultasi%20tentang%20perumahan%20Anda"
+      class="whatsapp-cta"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Griya Asri Jombang</h3>
+            <p>
+              Perumahan modern dengan konsep hunian keluarga yang nyaman dan
+              aman, dijual langsung oleh PT Bangun Sejahtera.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Navigasi</h3>
+            <ul class="footer-links">
+              <li><a href="#about">Tentang Proyek</a></li>
+              <li><a href="#location">Lokasi</a></li>
+              <li><a href="#facilities">Fasilitas</a></li>
+              <li><a href="#units">Unit & Harga</a></li>
+              <li><a href="#contact">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Kontak</h3>
+            <ul class="footer-links">
+              <li>Jl. Perumahan Griya Asri No. 88</li>
+              <li>Jombang, Jawa Timur</li>
+              <li>+6289606360400 (WhatsApp)</li>
+              <li>info@griyaasrijombang.com</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Developer</h3>
+            <ul class="footer-links">
+              <li>PT Bangun Sejahtera</li>
+              <li>NPWP: 01.234.567.8-912.000</li>
+              <li>Developer Terpercaya sejak 2008</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            &copy; 2023 PT Bangun Sejahtera. All rights reserved. | Beli
+            Langsung dari Developer, Tanpa Perantara
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // FAQ Toggle
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const item = question.parentNode;
+          item.classList.toggle("active");
+        });
+      });
+
+      // Form Submission
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nama = document.getElementById("nama").value;
+          const telepon = document.getElementById("telepon").value;
+          const pilihan_unit = document.getElementById("pilihan_unit").value;
+          const pesan = document.getElementById("pesan").value;
+
+          let text = `Halo Griya Asri Jombang, saya ${nama} (${telepon}) ingin konsultasi tentang perumahan.`;
+
+          if (pilihan_unit) {
+            text += ` Saya tertarik dengan ${pilihan_unit}.`;
+          }
+
+          if (pesan) {
+            text += ` Pertanyaan saya: ${pesan}`;
+          }
+
+          const encodedText = encodeURIComponent(text);
+          window.open(
+            `https://wa.me/+6289606360400?text=${encodedText}`,
+            "_blank"
+          );
+        });
+
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+      const navMenu = document.querySelector(".nav-menu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+        });
+      });
+
+      // Smooth Scrolling for Anchor Links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Navbar background on scroll
+      window.addEventListener("scroll", () => {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.style.backgroundColor = "rgba(255, 255, 255, 0.98)";
+        } else {
+          navbar.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
+        }
+      });
+    </script>
+  </body>
+</html>
