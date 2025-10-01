@@ -9,7 +9,7 @@
     </title>
     <meta
       name="description"
-      content="Miliki rumah di Jombang langsung dari developer PT Bangun Sejahtera. Hunian modern, fasilitas lengkap, proses aman tanpa perantara. Hubungi WhatsApp sekarang."
+      content="Miliki rumah di Jombang langsung dari developer PT Royal Investama Property. Hunian modern, fasilitas lengkap, proses aman tanpa perantara. Hubungi WhatsApp sekarang."
     />
 
     <!-- JSON-LD Structured Data -->
@@ -17,8 +17,8 @@
       {
         "@context": "https://schema.org",
         "@type": "ResidentialProject",
-        "name": "Griya Asri Jombang",
-        "description": "Perumahan baru di Jombang — dibangun & dijual langsung oleh PT Bangun Sejahtera.",
+        "name": "Citra Griya Panjen",
+        "description": "Perumahan baru di Jombang — dibangun & dijual langsung oleh PT Royal Investama Property.",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Jombang",
@@ -27,7 +27,7 @@
         },
         "seller": {
           "@type": "Organization",
-          "name": "PT Bangun Sejahtera"
+          "name": "PT Royal Investama Property"
         }
       }
     </script>
@@ -140,9 +140,10 @@
         display: flex;
         align-items: center;
         gap: 0.75rem;
-        font-weight: 700;
+        /* font-weight: 700; */
         font-size: 1.25rem;
-        color: var(--primary);
+        /* color: var(--primary); */
+        color: var(--text);
         text-decoration: none;
       }
 
@@ -736,20 +737,24 @@
 
         .nav-menu {
           position: fixed;
-          top: 70px;
+          top: 64px;
           left: 0;
           width: 100%;
           background-color: var(--white);
           flex-direction: column;
+          background-color: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(10px);
           padding: 1.5rem;
           box-shadow: var(--shadow);
           transform: translateY(-100%);
           opacity: 0;
           transition: all 0.3s ease;
           z-index: 999;
+          display: none;
         }
 
         .nav-menu.active {
+          display: block;
           transform: translateY(0);
           opacity: 1;
         }
@@ -765,9 +770,9 @@
     <!-- Navbar -->
     <nav class="navbar">
       <div class="container navbar-container">
-        <a href="#" class="logo">
+        <a href="#home" class="logo">
           <i class="fas fa-home logo-icon"></i>
-          <span>Griya Asri Jombang</span>
+          <span>Citra Griya Panjen</span>
         </a>
 
         <button class="mobile-menu-btn">
@@ -796,7 +801,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="container">
         <div class="hero-content">
           <div class="hero-badge">Beli Langsung dari Developer</div>
@@ -824,7 +829,7 @@
     <section id="about">
       <div class="container">
         <div class="section-header">
-          <h2>Tentang Griya Asri Jombang</h2>
+          <h2>Tentang Citra Griya Panjen</h2>
           <p>
             Proyek perumahan eksklusif yang dibangun langsung oleh developer
             terpercaya di Jombang
@@ -834,12 +839,12 @@
           <div class="about-image">
             <img
               src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-              alt="Griya Asri Jombang"
+              alt="Citra Griya Panjen"
             />
           </div>
           <div class="about-text">
             <p>
-              Griya Asri Jombang adalah proyek perumahan oleh PT Bangun
+              Citra Griya Panjen adalah proyek perumahan oleh PT Bangun
               Sejahtera, dibangun untuk keluarga yang mengutamakan kenyamanan
               dan keamanan di kawasan Jombang yang strategis.
             </p>
@@ -891,7 +896,7 @@
         <div class="location-content">
           <div class="location-text">
             <p>
-              Griya Asri Jombang berada di lokasi strategis Jombang, dengan
+              Citra Griya Panjen berada di lokasi strategis Jombang, dengan
               akses mudah ke pusat kota, sekolah, rumah sakit, dan pusat
               perbelanjaan. Hanya 10 menit ke pusat kota Jombang.
             </p>
@@ -1144,7 +1149,7 @@
       <div class="container">
         <div class="section-header">
           <h2>Kata Pembeli</h2>
-          <p>Pengalaman langsung dari penghuni Griya Asri Jombang</p>
+          <p>Pengalaman langsung dari penghuni Citra Griya Panjen</p>
         </div>
         <div class="testimonials-grid">
           <div class="testimonial-card">
@@ -1302,14 +1307,14 @@
         </div>
         <div class="contact-container">
           <div class="contact-info">
-            <h3>PT Bangun Sejahtera</h3>
+            <h3>PT Royal Investama Property</h3>
             <p>
               Developer terpercaya dengan pengalaman lebih dari 15 tahun
               membangun hunian berkualitas di Jombang dan sekitarnya.
             </p>
             <div class="contact-details" style="margin-top: 2rem">
               <p>
-                <strong>Alamat:</strong> Jl. Perumahan Griya Asri No. 88,
+                <strong>Alamat:</strong> Dsn. Balongombo Ds.Pundong Kec.Diwek,
                 Jombang, Jawa Timur
               </p>
               <p><strong>Telepon/WhatsApp:</strong> +6289606360400</p>
@@ -1392,10 +1397,10 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h3>Griya Asri Jombang</h3>
+            <h3>Citra Griya Panjen</h3>
             <p>
               Perumahan modern dengan konsep hunian keluarga yang nyaman dan
-              aman, dijual langsung oleh PT Bangun Sejahtera.
+              aman, dijual langsung oleh PT Royal Investama Property.
             </p>
           </div>
           <div class="footer-section">
@@ -1411,7 +1416,7 @@
           <div class="footer-section">
             <h3>Kontak</h3>
             <ul class="footer-links">
-              <li>Jl. Perumahan Griya Asri No. 88</li>
+              <li>Dsn. Balongombo Ds.Pundong Kec.Diwek</li>
               <li>Jombang, Jawa Timur</li>
               <li>+6289606360400 (WhatsApp)</li>
               <li>info@griyaasrijombang.com</li>
@@ -1420,7 +1425,7 @@
           <div class="footer-section">
             <h3>Developer</h3>
             <ul class="footer-links">
-              <li>PT Bangun Sejahtera</li>
+              <li>PT Royal Investama Property</li>
               <li>NPWP: 01.234.567.8-912.000</li>
               <li>Developer Terpercaya sejak 2008</li>
             </ul>
@@ -1428,7 +1433,7 @@
         </div>
         <div class="copyright">
           <p>
-            &copy; 2023 PT Bangun Sejahtera. All rights reserved. | Beli
+            &copy; 2023 PT Royal Investama Property. All rights reserved. | Beli
             Langsung dari Developer, Tanpa Perantara
           </p>
         </div>
@@ -1455,7 +1460,7 @@
           const pilihan_unit = document.getElementById("pilihan_unit").value;
           const pesan = document.getElementById("pesan").value;
 
-          let text = `Halo Griya Asri Jombang, saya ${nama} (${telepon}) ingin konsultasi tentang perumahan.`;
+          let text = `Halo Citra Griya Panjen, saya ${nama} (${telepon}) ingin konsultasi tentang perumahan.`;
 
           if (pilihan_unit) {
             text += ` Saya tertarik dengan ${pilihan_unit}.`;
@@ -1506,14 +1511,14 @@
       });
 
       // Navbar background on scroll
-      window.addEventListener("scroll", () => {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-          navbar.style.backgroundColor = "rgba(255, 255, 255, 0.98)";
-        } else {
-          navbar.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
-        }
-      });
+      // window.addEventListener("scroll", () => {
+      //   const navbar = document.querySelector(".navbar");
+      //   if (window.scrollY > 50) {
+      //     navbar.style.backgroundColor = "rgba(255, 255, 255, 0.98)";
+      //   } else {
+      //     navbar.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
+      //   }
+      // });
     </script>
   </body>
 </html>
